@@ -1,0 +1,25 @@
+ul {
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+    position: relative;
+}
+  
+ul li:before {
+    content: "";
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    background-size: contain;
+    background-image: url("./logo.svg");
+}
+
+p {
+    font-weight: bold;
+}
+
+p span {
+    font-weight: normal;
+}

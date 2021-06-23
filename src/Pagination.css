@@ -1,0 +1,13 @@
+.pagination {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 25%;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+
+.active {
+    font-weight: bold;
+    border: 1px solid black;
+}
