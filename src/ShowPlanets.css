@@ -5,6 +5,18 @@ p {
 p span {
     font-weight: normal;
 }
+
+.show-planet-container {
+	color: white;
+}
+
+.search-input {
+	background: transparent;
+	color: white;
+	border: 1px solid white;
+	outline: none;
+}
+
 .planetsList {
 	padding: 0;
 	margin: 50px auto;
