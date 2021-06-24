@@ -7,7 +7,13 @@
     margin: 0 auto;
 }
 
+.pagination-item {
+    padding: 10px 15px;
+    color: rgb(219, 219, 219);
+}
+
 .active {
     font-weight: bold;
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
+    color: white;
 }

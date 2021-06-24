@@ -29,11 +29,11 @@ class Pagination extends Component {
         let pagination = this.state.allPages.map((pageNumber, index) => {
             if (index + 1 === this.props.CurrentPage) {
                 return (
-                    <div key={index + 1} id={index + 1} className='active'>{pageNumber}</div>
+                    <div key={index + 1} id={index + 1} className='active pagination-item'>{pageNumber}</div>
                 )
             } else {
                 return (
-                    <div key={index + 1} id={index + 1}>{pageNumber}</div>
+                    <div key={index + 1} id={index + 1} className='pagination-item'>{pageNumber}</div>
                 )
             }
 
@@ -41,7 +41,6 @@ class Pagination extends Component {
 
         return (
             <div>
-                <h3>Pagination</h3>
                 <div className='pagination'>
                     {pagination}
                 </div>

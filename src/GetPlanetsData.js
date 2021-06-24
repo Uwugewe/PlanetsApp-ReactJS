@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import './GetPlanetsData.css';
 import logo from './logo.svg';
 import ShowPlanetsData from "./ShowPlanetsData";
 import Pagination from './Pagination';
@@ -85,7 +86,7 @@ class GetPlanetsData extends Component {
             mountShowData = (
                 <div>
                     <Pagination CurrentPage={this.state.currentPage} Count={this.state.count} />
-                    <ShowPlanetsData PlanetsData={this.state.planetsData} />
+                    <ShowPlanetsData PlanetsData={this.state.planetsData} TensNumber={this.state.currentPage} />
                 </div>
             );
         } else {
@@ -112,7 +113,7 @@ class GetPlanetsData extends Component {
                 <button className='button-next' onClick={() => {
                     this.getSpaceData(this.state.nextLink);
                     this.pageCountNext();
-                }}>Next page</button>
+                }}>&#8594;</button>
             );
         } else {
             nextButton = '';
@@ -124,19 +125,21 @@ class GetPlanetsData extends Component {
                 <button className='button-prev' onClick={() => {
                     this.getSpaceData(this.state.prevLink);
                     this.pageCountPrev();
-                }}>Previous page</button>
+                }}>&#8592;</button>
             );
         } else {
             prevButton = '';
         }
 
         return (
-            <div>
-                {nextButton}
-                {prevButton}
-                {backButton}
+            <section className='main-section'>
+                <div className='buttons-row'>
+                    {nextButton}
+                    {prevButton}
+                    {backButton}
+                </div>
                 {mountShowData}
-            </div>
+            </section>
         )
     }
 }
